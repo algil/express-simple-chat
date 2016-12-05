@@ -1,0 +1,19 @@
+{
+  "name": "express-simple-chat",
+  "version": "1.0.0",
+  "description": "Simple chat using express and socket.io",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "supervisor app.js"
+  },
+  "author": "Antonio Gil <antonioluisgil@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.14.0",
+    "socket.io": "^1.7.1"
+  },
+  "devDependencies": {
+    "supervisor": "^0.12.0"
+  }
+}
