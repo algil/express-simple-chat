@@ -16,7 +16,7 @@ http.listen(port, () => console.log(`Running server on localhost:${port}`));
 io.on('connection', (socket) => {
     socket.broadcast.emit('new user', {message: 'New user has been connected'});
 
-    socket.on('new message', message => socket.emit('new message', message));
+    socket.on('new message', message => io.emit('new message', message));
 
     socket.on('disconnect', () => socket.broadcast.emit('user disconnected', {message: 'An user left the chat'}));
 });
