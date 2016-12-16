@@ -14,11 +14,11 @@
     }
 
     io.on('new user', function(newUser) {
-        alert(newUser.message);
+        console.log(newUser);
     });
 
     io.on('user disconnected', function(data) {
-        alert(data.message);
+        //alert(data.message);
     });
 
     io.on('new message', function (message) {

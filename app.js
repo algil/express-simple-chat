@@ -14,8 +14,7 @@ app.get('/', (req, res) => res.sendFile(`${publicDir}/index.html`));
 http.listen(port, () => console.log(`Running server on localhost:${port}`));
 
 io.on('connection', (socket) => {
-    console.log("Node version: ", WEBSITE_NODE_DEFAULT_VERSION);
-    socket.broadcast.emit('new user', {message: 'New user has been connected'});
+    socket.broadcast.emit('new user', {message: 'New user has been connected', nodeVersion: WEBSITE_NODE_DEFAULT_VERSION});
 
     socket.on('new message', message => io.emit('new message', message));
 
